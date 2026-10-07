@@ -83,4 +83,43 @@ public class MusicOrganizer
             return false;
         }
     }
+    
+    /**
+     * Question 6
+     */
+    public void listAllFiles()
+    {
+        for(String filename : files){
+            System.out.println(filename);
+        }
+    }
+    
+    /**
+     * Question 7
+     */
+    public void listWithIndex()
+    {
+        int position = 0;
+        for(String filename : files){
+            System.out.println(position + ": " + filename);
+            position++;
+        }
+    }
+    
+    /**
+     * Question 8 & 9
+     */
+    public void listMatching(String searchString)
+    {
+        boolean match = false;
+        for(String filename : files){
+            if(filename.contains(searchString)){
+                System.out.println(filename);
+                match = true;
+            }
+        }
+        if(match == false){
+            System.out.println("ERROR: No file names matched the search string!");
+        }
+    }
 }
